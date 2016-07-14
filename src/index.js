@@ -9,17 +9,8 @@ import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 import {syncHistoryWithStore} from 'react-router-redux';
 import App from './components/App';
 import Callback from './components/Callback';
-const tracks = [
-    {
-        title: 'Some track'
-    },
-    {
-        title: 'some other track'
-    }
-];
 
 const store = configureStore();
-store.dispatch(actions.setTracks(tracks));
 
 const history = syncHistoryWithStore(browserHistory, store);
 
